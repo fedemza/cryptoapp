@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 
-const CoinsInfo = () => {
+const CoinsInfo = ({ setCoins }) => {
   useEffect(() => {
     fetch(
-      `https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD`
+      `https://api.coinstats.app/public/v1/coins?skip=0&limit=300&currency=USD`
     )
       .then((response) => response.json())
-      .then((data) => {});
+      .then((data) => {
+        setCoins(data.coins);
+      });
   }, []);
 
   return <div>CoinsInfo</div>;
