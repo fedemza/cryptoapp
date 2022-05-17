@@ -1,24 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  Typography,
-  Menu,
-  Container,
-  Button,
-  MenuItem,
-} from "@mui/material";
-import { Menu as MenuIcon, Adb as AdbIcon } from "@mui/icons-material";
+import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
 
 const Nav = () => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
