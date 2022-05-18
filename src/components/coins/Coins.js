@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -11,44 +11,45 @@ import TableRow from "@mui/material/TableRow";
 import CoinsInfo from "../info/CoinsInfo";
 
 const columns = [
-  { id: "icon", label: "Logo", minWidth: 50 },
-  { id: "rank", label: "Rank", minWidth: 50 },
-  { id: "name", label: "Name", minWidth: 60 },
+  { id: "icon", label: "Logo", minWidth: 40 },
+  { id: "rank", label: "Rank", minWidth: 40 },
+  { id: "symbol", label: "Code", minWidth: 40 },
+  { id: "name", label: "Name", minWidth: 150 },
   { id: "price", label: "Price (USD)", minWidth: 30 },
-  { id: "marketCap", label: "Market Cap", minWidth: 40 },
+  { id: "priceChange1d", label: "24h%", minWidth: 40 },
+  { id: "marketCap", label: "Market Cap (USD)", minWidth: 60 },
 ];
-
-// const rows = [
-//   createData("India", "IN", 1324171354, 3287263),
-//   createData("China", "CN", 1403500365, 9596961),
-//   createData("Italy", "IT", 60483973, 301340),
-//   createData("United States", "US", 327167434, 9833520),
-//   createData("Canada", "CA", 37602103, 9984670),
-//   createData("Australia", "AU", 25475400, 7692024),
-//   createData("Germany", "DE", 83019200, 357578),
-//   createData("Ireland", "IE", 4857000, 70273),
-//   createData("Mexico", "MX", 126577691, 1972550),
-//   createData("Japan", "JP", 126317000, 377973),
-//   createData("France", "FR", 67022000, 640679),
-//   createData("United Kingdom", "GB", 67545757, 242495),
-//   createData("Russia", "RU", 146793744, 17098246),
-//   createData("Nigeria", "NG", 200962417, 923768),
-//   createData("Brazil", "BR", 210147125, 8515767),
-// ];
 
 const Coins = () => {
   const [coins, setCoins] = useState([]);
-  console.log(coins);
 
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  const createData = (rank, icon, name, price, marketCap) => {
-    return { rank, icon, name, price, marketCap };
+  const createData = (
+    id,
+    rank,
+    symbol,
+    priceChange1d,
+    icon,
+    name,
+    price,
+    marketCap
+  ) => {
+    return { id, rank, symbol, priceChange1d, icon, name, price, marketCap };
   };
 
   const rows = coins.map((coin) =>
-    createData(coin.rank, coin.icon, coin.name, coin.price, coin.marketCap)
+    createData(
+      coin.id,
+      coin.rank,
+      coin.symbol,
+      coin.priceChange1d,
+      coin.icon,
+      coin.name,
+      coin.price,
+      coin.marketCap
+    )
   );
 
   const handleChangePage = (event, newPage) => {
@@ -64,7 +65,7 @@ const Coins = () => {
     <>
       <CoinsInfo setCoins={setCoins} />
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
-        <TableContainer sx={{ maxHeight: 440 }}>
+        <TableContainer sx={{ maxHeight: 600 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
@@ -92,25 +93,34 @@ const Coins = () => {
                     >
                       {columns.map((column) => {
                         const value = row[column.id];
-                        //console.log("soy el value", value);
                         return (
                           <TableCell key={column.id} align={column.align}>
-                            {typeof value === "string" &&
-                            value[value.length - 4] +
-                              value[value.length - 3] +
-                              value[value.length - 2] +
-                              value[value.length - 1] ===
-                              ".png" ? (
-                              <img
-                                src={value}
-                                alt="not image"
-                                width="40px"
-                                height="40px"
-                              />
-                            ) : (
-                              value
-                            )}
-                            {console.log(typeof value)}
+                            <Link
+                              to={row["id"]}
+                              style={{ textDecoration: "none" }}
+                            >
+                              {typeof value === "string" &&
+                              value[value.length - 4] +
+                                value[value.length - 3] +
+                                value[value.length - 2] +
+                                value[value.length - 1] ===
+                                ".png" ? (
+                                <img
+                                  src={value}
+                                  alt="not image"
+                                  width="40px"
+                                  height="40px"
+                                />
+                              ) : column.id === "price" ? (
+                                <p>$ {value.toFixed(2)}</p>
+                              ) : column.id === "priceChange1d" ? (
+                                <p> {value.toFixed(2)} %</p>
+                              ) : column.id === "marketCap" ? (
+                                <p> $ {value.toFixed(2)} </p>
+                              ) : (
+                                value
+                              )}
+                            </Link>
                           </TableCell>
                         );
                       })}

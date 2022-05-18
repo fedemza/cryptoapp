@@ -1,9 +1,9 @@
-import Dashboard from "./views/Dashboard";
+import CryptoApp from "./views/CryptoApp";
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <CryptoApp />
     </div>
   );
 }

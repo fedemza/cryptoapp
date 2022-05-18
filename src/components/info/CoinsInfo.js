@@ -11,7 +11,7 @@ const CoinsInfo = ({ setCoins }) => {
       });
   }, []);
 
-  return <div>CoinsInfo</div>;
+  return <></>;
 };
 
 export default CoinsInfo;

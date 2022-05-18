@@ -11,21 +11,18 @@ import Nav from "../components/navbar/Nav";
 
 const Dashboard = () => {
   return (
-    <Router>
-      <div className="container">
-        <Header />
-        <Nav />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/coins" element={<Coins />} />
-          <Route path="/coins/:id" element={<CoinDetail />} />
-          <Route path="/*" element={<PageNotFound />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="container">
+      <Header />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/coins" element={<Coins />} />
+        <Route path="/coins/:id" element={<CoinDetail />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 };
 

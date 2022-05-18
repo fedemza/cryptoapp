@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer>
       <Box
-        px={{ xs: 3, sm: 10 }}
-        py={{ xs: 5, sm: 10 }}
+        px={{ xs: 2, sm: 10 }}
+        py={{ xs: 5, sm: 5 }}
         bgcolor="text.secondary"
         color="white"
       >
@@ -19,22 +19,22 @@ const Footer = () => {
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/" color="inherit">
-                  Ayuda
+                  Help
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contacto
+                  Contact
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Soporte
+                  Support
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Privacidad
+                  Privacity
                 </Link>
               </Box>
             </Grid>
