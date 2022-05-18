@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Link } from "@mui/material";
+import { CardActionArea, CardActions, Link } from "@mui/material";
 import CoinInfoDetail from "../info/CoinInfoDetail";
 import { Box } from "@mui/material";
 
@@ -42,6 +41,7 @@ const CoinDetail = () => {
                     src={coin.icon}
                     height="100px"
                     width="100px"
+                    alt=" not found"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   />
                 </Box>
@@ -122,6 +122,10 @@ const CoinDetail = () => {
       )}
     </>
   );
+};
+
+CoinDetail.defaultProps = {
+  id: 1,
 };
 
 export default CoinDetail;

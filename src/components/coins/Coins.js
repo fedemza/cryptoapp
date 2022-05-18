@@ -107,7 +107,7 @@ const Coins = () => {
                                 ".png" ? (
                                 <img
                                   src={value}
-                                  alt="not image"
+                                  alt="not found"
                                   width="40px"
                                   height="40px"
                                 />
@@ -142,17 +142,6 @@ const Coins = () => {
       </Paper>
     </>
   );
-
-  // return (
-
-  //   <div>
-  //     <CoinsInfo setCoins={setCoins} />
-
-  //     {coins.map((coin) => (
-  //       <h5>{coin.name}</h5>
-  //     ))}
-  //   </div>
-  // );
 };
 
 export default Coins;
