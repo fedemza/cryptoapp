@@ -23,7 +23,7 @@ const Nav = () => {
                   display: "block",
                 }}
               >
-                HOME
+                INICIO
               </Button>
             </Link>
             <Link to="/coins" style={{ textDecoration: "none" }}>
@@ -31,7 +31,7 @@ const Nav = () => {
                 size="large"
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                COINS
+                CRIPTOMONEDAS
               </Button>
             </Link>
             <Link to="/about" style={{ textDecoration: "none" }}>
@@ -39,7 +39,7 @@ const Nav = () => {
                 size="large"
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                ABOUT
+                SOBRE MI
               </Button>
             </Link>
           </Box>

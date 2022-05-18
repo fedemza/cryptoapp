@@ -13,19 +13,13 @@ const theme = createTheme();
 
 const Home = () => {
   return (
-    <ThemeProvider
-      theme={theme}
-      background-image=" https://www.freepik.es/vectores/bitcoin"
-      sx={{ backgroundimage: "https://www.freepik.es/vectores/bitcoin" }}
-    >
+    <ThemeProvider theme={theme}>
       <CssBaseline />
 
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: "background.paper",
-
             pt: 8,
             pb: 0,
           }}

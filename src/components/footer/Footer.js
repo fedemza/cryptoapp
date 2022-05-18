@@ -5,36 +5,37 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
+import twitter from "../../assets/twitter.svg";
 const Footer = () => {
   return (
     <footer>
       <Box
         px={{ xs: 2, sm: 10 }}
-        py={{ xs: 5, sm: 5 }}
+        py={{ xs: 5, sm: 2 }}
         bgcolor="text.secondary"
         color="white"
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={6} sm={2}>
               <Box>
                 <Link href="/" color="inherit">
-                  Help
+                  Ayuda
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Contacto
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Support
+                  Soporte
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Privacity
+                  Privacidad
                 </Link>
               </Box>
             </Grid>
@@ -55,6 +56,11 @@ const Footer = () => {
             <Grid item>
               <Link href="https://www.instagram.com/criptodemia/">
                 <img alt="instagram" src={instagram} />
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link href="https://twitter.com/home">
+                <img alt="twitter" src={twitter} />
               </Link>
             </Grid>
           </Grid>
