@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
@@ -47,7 +46,9 @@ const About = () => {
               color="text.primary"
               gutterBottom
             >
-              <h1>Sobre mi</h1> <br />
+              <div>
+                <h1>Sobre mi</h1> <br />
+              </div>
               Hola, Soy Fede y te voy a contar un poquito sobre mi. <br />
               Soy Licenciado en Economía con un MBA especializado en Finanzas.
               <br />
@@ -66,14 +67,14 @@ const About = () => {
               programacion backend de CoderHouse. Es un desafío muy lindo poder
               ayudar a otros alumnos a desarrollarse profesionalmente.
               <br />
-              Por otro lado, como proyecto personal, el año pasado comencé a
-              estudiar mucho sobre criptomonedas, además de invertir, también
-              decidí abrir un instagram{" "}
+              Por otro lado, mi otra pasión son las criptomonedas, invierto y
+              cree un Instagram con una comunidad de casi 30k donde comparto
+              información y asesoro para ayudar a otros con sus inversiones, te
+              invito a visitarlo!
+              <br />
               <Link href="https://www.instagram.com/criptodemia/">
-                criptodemia
+                Criptodemia
               </Link>
-              , que te invito a visitar, para compartir información de manera
-              gratuita ahi para ayudar a los demás.
             </Typography>
             <Typography
               variant="h5"

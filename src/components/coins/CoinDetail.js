@@ -69,7 +69,7 @@ const CoinDetail = () => {
                     component="h3"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Rank: {coin.rank}
+                    Ranking: {coin.rank}
                   </Typography>
                   <Typography
                     gutterBottom
@@ -77,7 +77,7 @@ const CoinDetail = () => {
                     component="h3"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Market Cap: $ {coin.marketCap.toFixed(2)}
+                    Capitalización de Mercado: $ {coin.marketCap.toFixed(2)}
                   </Typography>
                   <Typography
                     gutterBottom
@@ -85,15 +85,15 @@ const CoinDetail = () => {
                     component="h3"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Price: $ {coin.price.toFixed(2)}
+                    Precio: $ {coin.price.toFixed(2)}
                   </Typography>
                   <Typography
                     color="text.secondary"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Price change 1 week: {coin.priceChange1w} % <br /> Price
-                    change 1 day: {coin.priceChange1d} % <br /> Price change 1
-                    hour: {coin.priceChange1h} %
+                    Cambio de Precio 1 Semana: {coin.priceChange1w} % <br />{" "}
+                    Cambio de Precio 1 Día: {coin.priceChange1d} % <br /> Cambio
+                    de Precio 1 Hora: {coin.priceChange1h} %
                   </Typography>
                   <Typography
                     color="text.secondary"

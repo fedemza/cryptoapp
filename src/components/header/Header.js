@@ -34,7 +34,6 @@ const Header = () => {
                 width="40px"
                 alt=""
                 padding="1px"
-                marginLeft="80px"
                 sx={{ ml: 10 }}
               />
             </Typography>
