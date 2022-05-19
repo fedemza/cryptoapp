@@ -10,6 +10,7 @@ import Loading from "../commons/Loading";
 
 const CoinDetail = () => {
   let { id } = useParams();
+
   const [coin, setCoin] = useState(null);
   const [loading, setLoading] = useState(true);
 

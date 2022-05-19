@@ -1,14 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { Link } from "@mui/material";
+import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
 
 const PageNotFound = () => {
+  let navigate = useNavigate();
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -36,7 +39,13 @@ const PageNotFound = () => {
                 <h3>Página No Encontrada</h3> <br />
               </div>
               <br />
-              <Link href="/">Volver al Inicio</Link>
+              <Button
+                variant="contained"
+                size="large"
+                onClick={() => navigate("/coins")}
+              >
+                Ir a cotizaciones
+              </Button>
             </Typography>
           </Container>
         </Box>
