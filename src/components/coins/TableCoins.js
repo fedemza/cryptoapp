@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -131,6 +132,25 @@ const TableCoins = ({ coins }) => {
       />
     </Paper>
   );
+};
+
+TableCoins.propTypes = {
+  coins: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+TableCoins.defaultProps = {
+  coins: [
+    {
+      id: "bitcoin",
+      icon: "https://static.coinstats.app/coins/1650455588819.png",
+      name: "Bitcoin",
+      symbol: "BTC",
+      rank: 1,
+      price: 27860.18211979483,
+      marketCap: 530568778945.9124,
+      priceChange1d: 0,
+    },
+  ],
 };
 
 export default TableCoins;

@@ -134,8 +134,4 @@ const CoinDetail = () => {
   );
 };
 
-CoinDetail.defaultProps = {
-  id: 1,
-};
-
 export default CoinDetail;

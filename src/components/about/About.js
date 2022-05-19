@@ -69,7 +69,7 @@ const About = () => {
               <br />
               Por otro lado, mi otra pasión son las criptomonedas, invierto y
               cree un Instagram con una comunidad de casi 30k donde comparto
-              información y asesoro para ayudar a otros con sus inversiones, te
+              información y asesoro para ayudar a otros con sus inversiones. Te
               invito a visitarlo!
               <br />
               <Link href="https://www.instagram.com/criptodemia/">
