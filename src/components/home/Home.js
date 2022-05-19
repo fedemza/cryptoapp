@@ -5,7 +5,6 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CoinsCards from "./CoinsCards";
 
@@ -43,6 +42,7 @@ const Home = () => {
               En este sitio, podrás tener toda la informacion actualizada en
               tiempo real del mundo de las criptomonedas.
             </Typography>
+
             <Stack
               sx={{ pt: 0 }}
               direction="row"
@@ -55,6 +55,7 @@ const Home = () => {
             </Stack>
           </Container>
         </Box>
+
         <CoinsCards />
       </main>
     </ThemeProvider>
