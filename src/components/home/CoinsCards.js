@@ -42,9 +42,9 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href="/coins/ethereum">
-                <Button size="medium">Detalles</Button>
-              </Link>
+              <Button href="/coins/ethereum" size="medium">
+                Detalles
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -76,9 +76,9 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href="/coins/bitcoin">
-                <Button size="medium">Detalles</Button>
-              </Link>
+              <Button href="/coins/bitcoin" size="medium">
+                Detalles
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -112,9 +112,9 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href="/coins/binance-coin">
-                <Button size="medium">Detalles</Button>
-              </Link>
+              <Button href="/coins/binance-coin" size="medium">
+                Detalles
+              </Button>
             </CardActions>
           </Card>
         </Grid>

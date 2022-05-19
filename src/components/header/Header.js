@@ -5,7 +5,7 @@ import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 const Header = () => {
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "#050340" }}>
         <Container
           maxWidth="xl"
           sx={{

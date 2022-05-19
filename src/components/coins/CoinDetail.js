@@ -3,20 +3,21 @@ import { useParams } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, CardActions, Link } from "@mui/material";
+import { CardActionArea, Link, Button, Stack } from "@mui/material";
 import CoinInfoDetail from "../info/CoinInfoDetail";
 import { Box } from "@mui/material";
+import Loading from "../commons/Loading";
 
 const CoinDetail = () => {
   let { id } = useParams();
   const [coin, setCoin] = useState(null);
-  console.log("coin", coin);
+  const [loading, setLoading] = useState(true);
 
   return (
     <>
-      <CoinInfoDetail coinId={id} setCoin={setCoin} />
-      {coin === null ? (
-        <h1>Loading</h1>
+      <CoinInfoDetail coinId={id} setCoin={setCoin} setLoading={setLoading} />
+      {loading ? (
+        <Loading />
       ) : (
         <div>
           <Box
@@ -24,7 +25,7 @@ const CoinDetail = () => {
               flexGrow: 1,
               display: { md: "flex" },
               justifyContent: "center",
-              marginBottom: 20,
+              marginBottom: 10,
             }}
           >
             <Card
@@ -99,25 +100,34 @@ const CoinDetail = () => {
                     color="text.secondary"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    <bold>
+                    <>
                       Website:{" "}
                       <Link href={coin.websiteUrl}>{coin.websiteUrl}</Link>
-                    </bold>
+                    </>
                   </Typography>
                   <Typography
                     color="text.secondary"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    <bold>
+                    <>
                       Twitter:{" "}
                       <Link href={coin.twitterUrl}>{coin.twitterUrl}</Link>
-                    </bold>
+                    </>
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions></CardActions>
             </Card>
           </Box>
+          <Stack
+            sx={{ mb: 10 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+            <Button href="/coins" variant="contained">
+              Cotizaciones
+            </Button>
+          </Stack>
         </div>
       )}
     </>

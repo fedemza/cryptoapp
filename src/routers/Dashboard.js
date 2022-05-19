@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import About from "../components/about/About";
 import CoinDetail from "../components/coins/CoinDetail";
 import Coins from "../components/coins/Coins";

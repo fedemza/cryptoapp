@@ -1,4 +1,4 @@
-import CryptoApp from "./views/CryptoApp";
+import CryptoApp from "./routers/CryptoApp";
 
 function App() {
   return (

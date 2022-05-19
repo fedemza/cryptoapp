@@ -49,9 +49,9 @@ const Home = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Link href="/coins">
-                <Button variant="contained">Cotizaciones</Button>
-              </Link>
+              <Button href="/coins" variant="contained">
+                Cotizaciones
+              </Button>
             </Stack>
           </Container>
         </Box>
