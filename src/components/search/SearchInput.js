@@ -1,5 +1,6 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
+import SearchIcon from "@mui/icons-material/Search";
 
 const SearchInput = ({ setCoins, apiInfo }) => {
   const filterCoins = (e) => {
@@ -15,6 +16,7 @@ const SearchInput = ({ setCoins, apiInfo }) => {
   return (
     <>
       <form>
+        <SearchIcon color="primary" fontSize="large" sx={{ mt: "13px" }} />
         <TextField
           sx={{ mt: "10px", ml: "2px", border: "0.5px solid darkblue" }}
           onChange={(e) => {

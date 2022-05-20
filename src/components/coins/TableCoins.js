@@ -69,7 +69,7 @@ const TableCoins = ({ coins }) => {
                 <TableCell
                   key={index}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, fontSize: "1rem" }}
                 >
                   {column.label}
                 </TableCell>

@@ -17,9 +17,13 @@ const CoinDetail = () => {
   const [changeArg, setChangeArg] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const handleChange = (response) => {
+    setChangeArg(response);
+  };
+
   return (
     <>
-      <ChangeArgInfo setChangeArg={setChangeArg} />
+      <ChangeArgInfo handleChange={handleChange} />
       <CoinInfoDetail coinId={id} setCoin={setCoin} setLoading={setLoading} />
       <div
         style={{
@@ -41,6 +45,7 @@ const CoinDetail = () => {
               marginBottom: 10,
             }}
           >
+            {" "}
             <Card
               sx={{
                 maxWidth: 500,
@@ -139,8 +144,9 @@ const CoinDetail = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-            </Card>
+            </Card>{" "}
           </Box>
+
           <Stack
             sx={{ mb: 10 }}
             direction="row"

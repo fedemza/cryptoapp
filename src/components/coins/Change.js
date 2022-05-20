@@ -3,9 +3,13 @@ import ChangeArgInfo from "../../data/ChangeArgInfo";
 
 const Change = () => {
   const [change, setChange] = useState(null);
+
+  const handleChange = (response) => {
+    setChange(response);
+  };
   return (
     <>
-      <ChangeArgInfo setChange={setChange} />
+      <ChangeArgInfo handleChange={handleChange} />
 
       <h4
         style={{
