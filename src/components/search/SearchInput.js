@@ -6,8 +6,10 @@ const SearchInput = ({ setCoins, apiInfo }) => {
   const filterCoins = (e) => {
     e.preventDefault();
 
-    const coinsFiltered = apiInfo.filter((coin) =>
-      coin.name.toLowerCase().includes(e.target.value.toLowerCase())
+    const coinsFiltered = apiInfo.filter(
+      (coin) =>
+        coin.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        coin.symbol.toLowerCase().includes(e.target.value.toLowerCase())
     );
 
     setCoins(coinsFiltered);
