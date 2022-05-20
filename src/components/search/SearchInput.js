@@ -16,9 +16,7 @@ const SearchInput = ({ setCoins, apiInfo }) => {
     <>
       <form>
         <TextField
-          sx={{ mt: "10px", ml: "2px", border: "0.5px solid" }}
-          id="search-bar"
-          className="text"
+          sx={{ mt: "10px", ml: "2px", border: "0.5px solid darkblue" }}
           onChange={(e) => {
             filterCoins(e);
           }}

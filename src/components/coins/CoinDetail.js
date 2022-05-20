@@ -4,19 +4,31 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Link, Button, Stack } from "@mui/material";
-import CoinInfoDetail from "../info/CoinInfoDetail";
+import CoinInfoDetail from "../../data/CoinInfoDetail";
 import { Box } from "@mui/material";
 import Loading from "../commons/Loading";
+import ChangeArgInfo from "../../data/ChangeArgInfo";
+import Change from "./Change";
 
 const CoinDetail = () => {
   let { id } = useParams();
 
   const [coin, setCoin] = useState(null);
+  const [changeArg, setChangeArg] = useState(null);
   const [loading, setLoading] = useState(true);
 
   return (
     <>
+      <ChangeArgInfo setChangeArg={setChangeArg} />
       <CoinInfoDetail coinId={id} setCoin={setCoin} setLoading={setLoading} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Change />
+      </div>
       {loading ? (
         <Loading />
       ) : (
@@ -79,7 +91,7 @@ const CoinDetail = () => {
                     component="h3"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Capitalización de Mercado: $ {coin.marketCap.toFixed(2)}
+                    Cap. de Mercado: $ {coin.marketCap.toFixed(2)}
                   </Typography>
                   <Typography
                     gutterBottom
@@ -87,7 +99,17 @@ const CoinDetail = () => {
                     component="h3"
                     sx={{ display: { md: "flex" }, justifyContent: "center" }}
                   >
-                    Precio: $ {coin.price.toFixed(2)}
+                    Precio (U$D): $ {coin.price.toFixed(2)}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h3"
+                    sx={{ display: { md: "flex" }, justifyContent: "center" }}
+                  >
+                    Precio (ARG): ${" "}
+                    {changeArg &&
+                      (parseFloat(changeArg) * coin.price).toFixed(2)}
                   </Typography>
                   <Typography
                     color="text.secondary"

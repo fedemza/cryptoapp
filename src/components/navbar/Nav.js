@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
 
 const Nav = () => {
@@ -14,34 +13,36 @@ const Nav = () => {
               justifyContent: "center",
             }}
           >
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <Button
-                size="large"
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                }}
-              >
-                INICIO
-              </Button>
-            </Link>
-            <Link to="/coins" style={{ textDecoration: "none" }}>
-              <Button
-                size="large"
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                CRIPTOMONEDAS
-              </Button>
-            </Link>
-            <Link to="/about" style={{ textDecoration: "none" }}>
-              <Button
-                size="large"
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                SOBRE MI
-              </Button>
-            </Link>
+            <Button
+              href="/"
+              style={{ textDecoration: "none" }}
+              size="large"
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+              }}
+            >
+              INICIO
+            </Button>
+
+            <Button
+              href="/coins"
+              style={{ textDecoration: "none" }}
+              size="large"
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              CRIPTOMONEDAS
+            </Button>
+
+            <Button
+              href="/about"
+              style={{ textDecoration: "none" }}
+              size="large"
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              SOBRE MI
+            </Button>
           </Box>
         </Toolbar>
       </Container>
