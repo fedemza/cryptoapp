@@ -19,16 +19,14 @@ const Footer = () => {
           <Grid container spacing={5}>
             <Grid item xs={6} sm={2}>
               <Box>
-                <Link color="inherit">Ayuda</Link>
+                <Link href="/contact" color="inherit">
+                  Contacto
+                </Link>
               </Box>
               <Box>
-                <Link color="inherit">Contacto</Link>
-              </Box>
-              <Box>
-                <Link color="inherit">Soporte</Link>
-              </Box>
-              <Box>
-                <Link color="inherit">Privacidad</Link>
+                <Link href="/support" color="inherit">
+                  Soporte
+                </Link>
               </Box>
             </Grid>
           </Grid>

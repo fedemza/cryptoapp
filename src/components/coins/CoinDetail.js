@@ -31,7 +31,7 @@ const CoinDetail = () => {
           justifyContent: "center",
         }}
       >
-        <Change />
+        {!loading && <Change />}
       </div>
       {loading ? (
         <Loading />

@@ -50,7 +50,8 @@ const About = () => {
                 <h1>Sobre mi</h1> <br />
               </div>
               Hola, Soy Fede y te voy a contar un poquito sobre mi. <br />
-              Soy Licenciado en Economía con un MBA especializado en Finanzas.
+              Soy Fullstack Developer y Licenciado en Economía con un MBA
+              especializado en Finanzas.
               <br />
               Nací en Mendoza pero hace casi 4 años que estoy viviendo en
               Córdoba. Vine para abrir un emprendimiento junto a otros dos
@@ -67,10 +68,10 @@ const About = () => {
               programacion backend de CoderHouse. Es un desafío muy lindo poder
               ayudar a otros alumnos a desarrollarse profesionalmente.
               <br />
-              Por otro lado, mi otra pasión son las criptomonedas, invierto y
-              cree un Instagram con una comunidad de casi 30k donde comparto
-              información y asesoro para ayudar a otros con sus inversiones. Te
-              invito a visitarlo!
+              Por otro lado, mi otra pasión son las criptomonedas. Además de
+              invertir, creé un instagram con una comunidad de casi 30k donde
+              comparto información y brindo asesoramiento. Te invito a
+              visitarlo!
               <br />
               <Link href="https://www.instagram.com/criptodemia/">
                 Criptodemia

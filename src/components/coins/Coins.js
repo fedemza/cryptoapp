@@ -26,12 +26,8 @@ const Coins = () => {
           justifyContent: "space-around",
         }}
       >
-        {loading ? (
-          <> </>
-        ) : (
-          <SearchInput setCoins={setCoins} apiInfo={apiInfo} />
-        )}
-        <Change />
+        {!loading && <SearchInput setCoins={setCoins} apiInfo={apiInfo} />}
+        {!loading && <Change />}
       </Box>
 
       {loading ? <Loading /> : <TableCoins coins={coins} />}
