@@ -5,9 +5,8 @@ import CustomForm from "../commons/CustomForm";
 const Contact = () => {
   const fields = ["nombre", "email", "mensaje"];
 
-  const handleSubmit = (values) => {
-    alert(JSON.stringify(values, null, 2));
-  };
+  const urlFetch = "https://jsonplaceholder.typicode.com/posts";
+  const urlNavigate = "/";
 
   const validationSchema = yup.object({
     nombre: yup.string("Ingrese su nombre").required("su nombre es requerido"),
@@ -24,8 +23,9 @@ const Contact = () => {
     <div>
       <CustomForm
         fields={fields}
-        handleSubmit={handleSubmit}
         validationSchema={validationSchema}
+        urlNavigate={urlNavigate}
+        urlFetch={urlFetch}
       />
     </div>
   );

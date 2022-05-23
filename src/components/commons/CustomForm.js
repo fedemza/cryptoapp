@@ -1,15 +1,34 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 import { TextField, Container } from "@mui/material";
 
-const CustomForm = ({ fields, handleSubmit, validationSchema }) => {
+const CustomForm = ({ fields, urlNavigate, urlFetch, validationSchema }) => {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {},
     validationSchema: validationSchema,
-    onSubmit: handleSubmit,
+    onSubmit: (values) => {
+      fetch(urlFetch, {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          alert("Formulario enviado correctamente");
+          navigate(urlNavigate);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   });
 
   return (
@@ -39,7 +58,9 @@ const CustomForm = ({ fields, handleSubmit, validationSchema }) => {
 
 CustomForm.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  urlFetch: PropTypes.string.isRequired,
+  urlNavigate: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
 };
 
 CustomForm.defaultProps = {
