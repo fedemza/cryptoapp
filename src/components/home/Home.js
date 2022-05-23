@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Stack from "@mui/material/Stack";
@@ -49,7 +50,7 @@ const Home = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button href="/coins" variant="contained">
+              <Button component={Link} to="/coins" variant="contained">
                 Cotizaciones
               </Button>
             </Stack>

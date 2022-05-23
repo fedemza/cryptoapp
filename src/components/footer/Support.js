@@ -12,11 +12,14 @@ const Support = () => {
   const validationSchema = yup.object({
     nombre: yup.string("Ingrese su nombre").required("su nombre es requerido"),
     email: yup
-      .string("Enter your email")
-      .email("Enter a valid email")
-      .required("Email is required"),
+      .string("Ingrese su email")
+      .email("Ingrese un mail valido")
+      .required("su email es requerido"),
     telefono: yup
       .number("tiene que ser un numero")
+      .typeError("eso no parece un numero de telefono")
+      .positive("No se pueden numeros negativos")
+      .integer("No se pueden decimales")
       .required("su numero de telefono es requerido"),
     mensaje: yup
       .string("Ingrese su mensaje")

@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
@@ -19,12 +19,12 @@ const Footer = () => {
           <Grid container spacing={5}>
             <Grid item xs={6} sm={2}>
               <Box>
-                <Link href="/contact" color="inherit">
+                <Link to="/contact" color="inherit">
                   Contacto
                 </Link>
               </Box>
               <Box>
-                <Link href="/support" color="inherit">
+                <Link to="/support" color="inherit">
                   Soporte
                 </Link>
               </Box>
@@ -39,19 +39,19 @@ const Footer = () => {
             alignItems="center"
           >
             <Grid item>
-              <Link href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/">
                 <img alt="facebook" src={facebook} />
-              </Link>
+              </a>
             </Grid>
             <Grid item>
-              <Link href="https://www.instagram.com/criptodemia/">
+              <a href="https://www.instagram.com/criptodemia/">
                 <img alt="instagram" src={instagram} />
-              </Link>
+              </a>
             </Grid>
             <Grid item>
-              <Link href="https://twitter.com/home">
+              <a href="https://twitter.com/home">
                 <img alt="twitter" src={twitter} />
-              </Link>
+              </a>
             </Grid>
           </Grid>
         </Container>

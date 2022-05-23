@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -41,7 +42,7 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button href="/coins/ethereum" size="medium">
+              <Button component={Link} to="/coins/ethereum" size="medium">
                 Detalles
               </Button>
             </CardActions>
@@ -75,7 +76,7 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button href="/coins/bitcoin" size="medium">
+              <Button component={Link} to="/coins/bitcoin" size="medium">
                 Detalles
               </Button>
             </CardActions>
@@ -111,7 +112,7 @@ const CoinsCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button href="/coins/binance-coin" size="medium">
+              <Button component={Link} to="/coins/binance-coin" size="medium">
                 Detalles
               </Button>
             </CardActions>

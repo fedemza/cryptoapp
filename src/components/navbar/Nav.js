@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -14,7 +15,8 @@ const Nav = () => {
             }}
           >
             <Button
-              href="/"
+              component={Link}
+              to="/"
               style={{ textDecoration: "none" }}
               size="large"
               sx={{
@@ -25,9 +27,9 @@ const Nav = () => {
             >
               INICIO
             </Button>
-
             <Button
-              href="/coins"
+              component={Link}
+              to="/coins"
               style={{ textDecoration: "none" }}
               size="large"
               sx={{ my: 2, color: "white", display: "block" }}
@@ -36,7 +38,8 @@ const Nav = () => {
             </Button>
 
             <Button
-              href="/about"
+              component={Link}
+              to="/about"
               style={{ textDecoration: "none" }}
               size="large"
               sx={{ my: 2, color: "white", display: "block" }}
