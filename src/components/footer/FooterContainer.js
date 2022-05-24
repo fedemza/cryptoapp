@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
-const Footer = () => {
+const FooterContainer = () => {
   return (
     <footer>
       <Box
@@ -60,4 +60,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterContainer;

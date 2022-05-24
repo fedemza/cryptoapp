@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import { searchCoins } from "../../redux/actions";
 
-const SearchInput = () => {
+const SearchInputContainer = () => {
   const dispatch = useDispatch();
 
   const filterCoins = (e) => {
@@ -32,4 +32,4 @@ const SearchInput = () => {
   );
 };
 
-export default SearchInput;
+export default SearchInputContainer;

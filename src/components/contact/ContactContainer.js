@@ -2,7 +2,7 @@ import React from "react";
 import * as yup from "yup";
 import CustomForm from "../commons/CustomForm";
 
-const Contact = () => {
+const ContactContainer = () => {
   const fields = ["nombre", "email", "mensaje"];
 
   const urlFetch = "https://jsonplaceholder.typicode.com/posts";
@@ -31,4 +31,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactContainer;

@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
 
-const PageNotFound = () => {
+const PageNotFoundContainer = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -53,4 +53,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default PageNotFoundContainer;

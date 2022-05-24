@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const NavContainer = () => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -53,4 +53,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavContainer;

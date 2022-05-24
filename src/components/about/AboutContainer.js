@@ -10,7 +10,7 @@ import fede from "../../assets/fede.jpg";
 
 const theme = createTheme();
 
-const About = () => {
+const AboutContainer = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -101,4 +101,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutContainer;

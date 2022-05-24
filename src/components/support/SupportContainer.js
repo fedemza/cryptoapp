@@ -2,7 +2,7 @@ import React from "react";
 import * as yup from "yup";
 import CustomForm from "../commons/CustomForm";
 
-const Support = () => {
+const SupportContainer = () => {
   const fields = ["nombre", "email", "telefono", "mensaje"];
 
   const urlFetch = "https://jsonplaceholder.typicode.com/posts";
@@ -37,4 +37,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default SupportContainer;

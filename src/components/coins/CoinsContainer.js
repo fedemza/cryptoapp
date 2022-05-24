@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "../commons/Loading";
-import SearchInput from "../search/SearchInput";
+import SearchInput from "../search/SearchInputContainer";
 import TableCoinsValues from "./TableCoinsValues";
-import Change from "../changeArg/Change";
+import Change from "../changeArg/ChangeContainer";
 import { getCoins } from "../../redux/actions";
 
-const Coins = () => {
+const CoinsContainer = () => {
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(true);
@@ -35,4 +35,4 @@ const Coins = () => {
   );
 };
 
-export default Coins;
+export default CoinsContainer;

@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import About from "../components/about/About";
-import CoinDetailContainer from "../components/coinDetail/CoinDetailContainer";
-import Coins from "../components/coins/Coins";
-import PageNotFound from "../components/error/PageNotFound";
-import Footer from "../components/footer/Footer";
-import Contact from "../components/footer/Contact";
-import Support from "../components/footer/Support";
-import Header from "../components/header/Header";
-import Home from "../components/home/Home";
-import Nav from "../components/navbar/Nav";
+import About from "../components/about/AboutContainer";
+import CoinDetail from "../components/coinDetail/CoinDetailContainer";
+import Coins from "../components/coins/CoinsContainer";
+import PageNotFound from "../components/error/PageNotFoundContainer";
+import Footer from "../components/footer/FooterContainer";
+import Contact from "../components/contact/ContactContainer";
+import Support from "../components/support/SupportContainer";
+import Header from "../components/header/HeaderContainer";
+import Home from "../components/home/HomeContainer";
+import Nav from "../components/navbar/NavContainer";
 
 const Dashboard = () => {
   return (
@@ -20,7 +20,7 @@ const Dashboard = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/coins" element={<Coins />} />
-        <Route path="/coins/:id" element={<CoinDetailContainer />} />
+        <Route path="/coins/:id" element={<CoinDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<PageNotFound />} />

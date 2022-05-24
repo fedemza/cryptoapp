@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getChangeArg } from "../../redux/actions";
 
-const Change = () => {
+const ChangeContainer = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
 
@@ -30,4 +30,4 @@ const Change = () => {
   );
 };
 
-export default Change;
+export default ChangeContainer;

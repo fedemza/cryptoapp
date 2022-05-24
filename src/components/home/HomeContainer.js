@@ -11,7 +11,7 @@ import CoinsCards from "./CoinsCards";
 
 const theme = createTheme();
 
-const Home = () => {
+const HomeContainer = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -63,4 +63,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeContainer;

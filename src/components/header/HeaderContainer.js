@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 
-const Header = () => {
+const HeaderContainer = () => {
   return (
     <div>
       <AppBar position="static" sx={{ backgroundColor: "#050340" }}>
@@ -62,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderContainer;
