@@ -1,15 +1,23 @@
-import React, { useState } from "react";
-import ChangeArgInfo from "../../data/ChangeArgInfo";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getChangeArg } from "../../redux/actions";
 
 const Change = () => {
-  const [change, setChange] = useState(null);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
-  const handleChange = (response) => {
-    setChange(response);
-  };
+  // const handleChange = (response) => {
+  //   setChange(response);
+  // };
+
+  useEffect(() => {
+    dispatch(getChangeArg(setLoading));
+  }, [dispatch]);
+
+  const changeArg = useSelector((state) => state.changeArg);
   return (
     <>
-      <ChangeArgInfo handleChange={handleChange} />
+      {/* <ChangeArgInfo handleChange={handleChange} /> */}
 
       <h4
         style={{
@@ -20,7 +28,7 @@ const Change = () => {
           padding: "0px",
         }}
       >
-        Tipo de cambio Dolar Oficial: $ {!change ? "000,00" : change}
+        Tipo de cambio Dolar Oficial: $ {!changeArg ? "000,00" : changeArg}
       </h4>
     </>
   );

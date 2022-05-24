@@ -1,0 +1,2 @@
+export const GET_COIN_DETAILS = "GET_COIN_DETAILS";
+export const GET_CHANGE_ARG = "GET_CHANGE_ARG";

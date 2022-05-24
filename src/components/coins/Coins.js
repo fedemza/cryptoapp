@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Loading from "../commons/Loading";
-
 import CoinsInfo from "../../data/CoinsInfo";
 import SearchInput from "../search/SearchInput";
-import TableCoins from "./TableCoins";
+import TableCoinsValues from "./TableCoinsValues";
 import Change from "./Change";
 
 const Coins = () => {
@@ -30,7 +29,7 @@ const Coins = () => {
         {!loading && <Change />}
       </Box>
 
-      {loading ? <Loading /> : <TableCoins coins={coins} />}
+      {loading ? <Loading /> : <TableCoinsValues coins={coins} />}
     </>
   );
 };
