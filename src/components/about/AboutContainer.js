@@ -30,7 +30,6 @@ const AboutContainer = () => {
               width="384"
               alt=" not found"
               style={{ borderRadius: "100px" }}
-              // style="border-radius: 5px"
               sx={{
                 display: { md: "flex" },
                 justifyContent: "center",

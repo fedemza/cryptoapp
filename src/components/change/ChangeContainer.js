@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getChangeArg } from "../../redux/actions";
+import ChangeArg from "./ChangeArg";
 
 const ChangeContainer = () => {
   const dispatch = useDispatch();
@@ -13,19 +14,7 @@ const ChangeContainer = () => {
   const changeArg = useSelector((state) => state.changeArg);
   return (
     <>
-      {/* <ChangeArgInfo handleChange={handleChange} /> */}
-
-      <h4
-        style={{
-          color: "darkblue",
-          marginLeft: "2px",
-          marginTop: "10px",
-          marginRight: "0px",
-          padding: "0px",
-        }}
-      >
-        Tipo de cambio Dolar Oficial: $ {loading ? "000,00" : changeArg}
-      </h4>
+      <ChangeArg loading={loading} changeArg={changeArg} />
     </>
   );
 };

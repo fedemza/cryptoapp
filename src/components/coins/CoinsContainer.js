@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "../commons/Loading";
 import SearchInput from "../search/SearchInputContainer";
 import TableCoinsValues from "./TableCoinsValues";
-import Change from "../changeArg/ChangeContainer";
+import Change from "../change/ChangeContainer";
 import { getCoins } from "../../redux/actions";
 
 const CoinsContainer = () => {

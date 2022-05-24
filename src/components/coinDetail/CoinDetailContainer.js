@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Change from "../changeArg/ChangeContainer";
+import Change from "../change/ChangeContainer";
 import CoinDetail from "./CoinDetail";
 
 const CoinDetailContainer = () => {

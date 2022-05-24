@@ -32,7 +32,7 @@ const CustomForm = ({ fields, urlNavigate, urlFetch, validationSchema }) => {
   });
 
   return (
-    <Container maxWidth="sm" sx={{ mt: "10px", minHeight: "650px" }}>
+    <Container maxWidth="sm" sx={{ mt: "10px", minHeight: "700px" }}>
       <form onSubmit={formik.handleSubmit}>
         {fields.map((field, index) => (
           <TextField
