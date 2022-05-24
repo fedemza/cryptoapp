@@ -19,12 +19,12 @@ const Footer = () => {
           <Grid container spacing={5}>
             <Grid item xs={6} sm={2}>
               <Box>
-                <Link to="/contact" color="inherit">
+                <Link to="/contact" style={{ color: "white" }}>
                   Contacto
                 </Link>
               </Box>
               <Box>
-                <Link to="/support" color="inherit">
+                <Link to="/support" style={{ color: "white" }}>
                   Soporte
                 </Link>
               </Box>

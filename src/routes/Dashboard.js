@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import About from "../components/about/About";
-import CoinDetailContainer from "../components/coins/CoinDetailContainer";
+import CoinDetailContainer from "../components/coinDetail/CoinDetailContainer";
 import Coins from "../components/coins/Coins";
 import PageNotFound from "../components/error/PageNotFound";
 import Footer from "../components/footer/Footer";

@@ -1,6 +1,5 @@
 import React from "react";
 import TableCoins from "./TableCoins";
-import PropTypes from "prop-types";
 
 const TableCoinsValues = ({ coins }) => {
   const columns = [
@@ -26,28 +25,26 @@ const TableCoinsValues = ({ coins }) => {
     return { id, rank, symbol, priceChange1d, icon, name, price, marketCap };
   };
 
-  const rows = coins.map((coin) =>
-    createData(
-      coin.id,
-      coin.rank,
-      coin.symbol,
-      coin.priceChange1d,
-      coin.icon,
-      coin.name,
-      coin.price,
-      coin.marketCap
-    )
-  );
+  const rows =
+    coins &&
+    coins.map((coin) =>
+      createData(
+        coin.id,
+        coin.rank,
+        coin.symbol,
+        coin.priceChange1d,
+        coin.icon,
+        coin.name,
+        coin.price,
+        coin.marketCap
+      )
+    );
 
   return (
     <div>
       <TableCoins columns={columns} rows={rows} />
     </div>
   );
-};
-
-TableCoinsValues.propTypes = {
-  coins: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default TableCoinsValues;

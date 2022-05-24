@@ -1,18 +1,46 @@
-import React from "react";
-//import { useNavigate } from "react-router-dom";
-import { GET_CHANGE_ARG, GET_COIN_DETAILS } from "./actionTypes";
+import {
+  GET_CHANGE_ARG,
+  GET_COINS,
+  GET_COIN_DETAILS,
+  SEARCH_COINS,
+} from "./actionsTypes";
+
+export function getCoins(setLoading) {
+  return async function (dispatch) {
+    try {
+      let coins = await fetch(
+        `https://api.coinstats.app/public/v1/coins?skip=0&limit=500&currency=USD`
+      );
+      coins = await coins.json();
+      coins = await coins.coins;
+
+      setLoading(false);
+      return dispatch({
+        type: GET_COINS,
+        payload: coins,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
+
+export function searchCoins(input) {
+  return {
+    type: SEARCH_COINS,
+    payload: input,
+  };
+}
 
 export function getChangeArg(setLoading) {
   return async function (dispatch) {
     try {
-      var change = await fetch(
+      let change = await fetch(
         `https://www.dolarsi.com/api/api.php?type=valoresprincipales`
-      )
-        .then((response) => response.json())
-        .then((response) => response[0].casa.venta)
-        .then((response) => {
-          return response;
-        });
+      );
+      change = await change.json();
+      change = await change[0].casa.venta;
+
       setLoading(false);
       return dispatch({
         type: GET_CHANGE_ARG,
@@ -24,30 +52,15 @@ export function getChangeArg(setLoading) {
   };
 }
 
-// const ChangeArgInfo = () => {
-//   fetch(`https://www.dolarsi.com/api/api.php?type=valoresprincipales`)
-//     .then((response) => response.json())
-//     .then((response) => response[0].casa.venta)
-//     .then((response) => {
-//       return response;
-//     });
-// };
-
 export function getCoinDetails(id, setLoading) {
   return async function (dispatch) {
     try {
-      const coin = await fetch(
+      let coin = await fetch(
         `https://api.coinstats.app/public/v1/coins/${id}?currency=USD`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          //   if (data.coin === null || data.coin === undefined) {
-          //     navigate("*");
-          //   }
-          console.log(data.coin);
-          return data.coin;
-        });
-      console.log("soy coin de actions", coin);
+      );
+      coin = await coin.json();
+      coin = await coin.coin;
+
       setLoading(false);
       return dispatch({
         type: GET_COIN_DETAILS,
@@ -58,16 +71,3 @@ export function getCoinDetails(id, setLoading) {
     }
   };
 }
-const coinInfoDetail = (id) => {
-  // let navigate = useNavigate();
-
-  fetch(`https://api.coinstats.app/public/v1/coins/${id}?currency=USD`)
-    .then((response) => response.json())
-    .then((data) => {
-      //   if (data.coin === null || data.coin === undefined) {
-      //     navigate("*");
-      //   }
-      console.log(data.coin);
-      return data.coin;
-    });
-};

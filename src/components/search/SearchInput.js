@@ -1,18 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchInput = ({ setCoins, apiInfo }) => {
+import { searchCoins } from "../../redux/actions";
+
+const SearchInput = () => {
+  const dispatch = useDispatch();
+
   const filterCoins = (e) => {
     e.preventDefault();
 
-    const coinsFiltered = apiInfo.filter(
-      (coin) =>
-        coin.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        coin.symbol.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-
-    setCoins(coinsFiltered);
+    dispatch(searchCoins(e.target.value.toLowerCase()));
   };
 
   return (

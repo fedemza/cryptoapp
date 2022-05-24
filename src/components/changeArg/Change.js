@@ -6,10 +6,6 @@ const Change = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
 
-  // const handleChange = (response) => {
-  //   setChange(response);
-  // };
-
   useEffect(() => {
     dispatch(getChangeArg(setLoading));
   }, [dispatch]);
@@ -28,7 +24,7 @@ const Change = () => {
           padding: "0px",
         }}
       >
-        Tipo de cambio Dolar Oficial: $ {!changeArg ? "000,00" : changeArg}
+        Tipo de cambio Dolar Oficial: $ {loading ? "000,00" : changeArg}
       </h4>
     </>
   );

@@ -9,9 +9,11 @@ import { Box } from "@mui/material";
 import Loading from "../commons/Loading";
 
 import { getChangeArg, getCoinDetails } from "../../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 const CoinDetail = ({ id }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
 
@@ -25,6 +27,10 @@ const CoinDetail = ({ id }) => {
 
   const coin = useSelector((state) => state.coin_detail);
   const changeArg = useSelector((state) => state.changeArg);
+
+  if ((coin && coin === null) || coin === undefined) {
+    navigate("*");
+  }
 
   const icon = coin && coin.icon;
   const symbol = coin && coin.symbol;

@@ -9,45 +9,9 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
-// const columns = [
-//   { id: "icon", label: "Logo", minWidth: 40 },
-//   { id: "rank", label: "Ranking", minWidth: 40 },
-//   { id: "symbol", label: "Código", minWidth: 40 },
-//   { id: "name", label: "Nombre", minWidth: 150 },
-//   { id: "price", label: "Precio (USD)", minWidth: 30 },
-//   { id: "priceChange1d", label: "24h%", minWidth: 40 },
-//   { id: "marketCap", label: "Cap. Mercado (USD)", minWidth: 60 },
-// ];
-
 const TableCoins = ({ columns, rows }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-
-  // const createData = (
-  //   id,
-  //   rank,
-  //   symbol,
-  //   priceChange1d,
-  //   icon,
-  //   name,
-  //   price,
-  //   marketCap
-  // ) => {
-  //   return { id, rank, symbol, priceChange1d, icon, name, price, marketCap };
-  // };
-
-  // const rows = coins.map((coin) =>
-  //   createData(
-  //     coin.id,
-  //     coin.rank,
-  //     coin.symbol,
-  //     coin.priceChange1d,
-  //     coin.icon,
-  //     coin.name,
-  //     coin.price,
-  //     coin.marketCap
-  //   )
-  // );
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
