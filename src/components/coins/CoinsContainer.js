@@ -14,7 +14,7 @@ const CoinsContainer = () => {
   useEffect(() => {
     dispatch(getCoins(setLoading));
   }, [dispatch]);
-  
+    
   const coins = useSelector((state) => state.coins);
 
   return (
