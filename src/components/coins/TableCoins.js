@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import TableCoinsBody from "./TableCoinsBody";
 
 const TableCoins = ({ columns, rows }) => {
   const [page, setPage] = useState(0);
@@ -40,49 +39,12 @@ const TableCoins = ({ columns, rows }) => {
               ))}
             </TableRow>
           </TableHead>
-          <TableBody>
-            {rows
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row, index) => {
-                return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                    {columns.map((column, index) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={index} align={column.align}>
-                          <Link
-                            to={row["id"]}
-                            style={{ textDecoration: "none" }}
-                          >
-                            {typeof value === "string" &&
-                            value[value.length - 4] +
-                              value[value.length - 3] +
-                              value[value.length - 2] +
-                              value[value.length - 1] ===
-                              ".png" ? (
-                              <img
-                                src={value}
-                                alt="not found"
-                                width="40px"
-                                height="40px"
-                              />
-                            ) : column.id === "price" ? (
-                              <p>$ {value.toFixed(2)}</p>
-                            ) : column.id === "priceChange1d" ? (
-                              <p> {value.toFixed(2)} %</p>
-                            ) : column.id === "marketCap" ? (
-                              <p> $ {value.toFixed(2)} </p>
-                            ) : (
-                              value
-                            )}
-                          </Link>
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                );
-              })}
-          </TableBody>
+          <TableCoinsBody
+            columns={columns}
+            rows={rows}
+            page={page}
+            rowsPerPage={rowsPerPage}
+          />
         </Table>
       </TableContainer>
       <TablePagination
