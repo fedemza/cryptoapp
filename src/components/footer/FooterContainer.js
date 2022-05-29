@@ -9,22 +9,17 @@ import twitter from "../../assets/twitter.svg";
 const FooterContainer = () => {
   return (
     <footer>
-      <Box
-        px={{ xs: 2, sm: 10 }}
-        py={{ xs: 5, sm: 2 }}
-        bgcolor="text.secondary"
-        color="white"
-      >
+      <Box px={{ xs: 2, sm: 10 }} py={{ xs: 5, sm: 2 }} bgcolor="#95A5A6">
         <Container maxWidth="lg">
           <Grid container spacing={5}>
             <Grid item xs={6} sm={2}>
               <Box>
-                <Link to="/contact" style={{ color: "white" }}>
+                <Link to="/contact" style={{ color: "#17202A" }}>
                   Contacto
                 </Link>
               </Box>
               <Box>
-                <Link to="/support" style={{ color: "white" }}>
+                <Link to="/support" style={{ color: "#17202A" }}>
                   Soporte
                 </Link>
               </Box>

@@ -11,10 +11,10 @@ import Header from "../components/header/HeaderContainer";
 import Home from "../components/home/HomeContainer";
 import Nav from "../components/navbar/NavContainer";
 
-const Dashboard = () => {
+const Dashboard = ({ mode, setMode }) => {
   return (
     <div className="container">
-      <Header />
+      <Header mode={mode} setMode={setMode} />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

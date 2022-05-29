@@ -1,11 +1,23 @@
 import React from "react";
 import logo from "../../assets/logo.png";
-import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import { AppBar, Toolbar, Typography, Container, Box } from "@mui/material";
+import { Switch } from "@mui/material";
+import Brightness4OutlinedIcon from "@mui/icons-material/Brightness4Outlined";
 
-const HeaderContainer = () => {
+const HeaderContainer = ({ mode, setMode }) => {
   return (
     <div>
       <AppBar position="static" sx={{ backgroundColor: "#050340" }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { md: "flex" },
+            justifyContent: "flex-start",
+          }}
+        >
+          <Switch onClick={() => setMode(!mode)}> </Switch>
+          <Brightness4OutlinedIcon sx={{ mt: 1 }} />
+        </Box>
         <Container
           maxWidth="xl"
           sx={{

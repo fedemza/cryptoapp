@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Link, Button, Stack } from "@mui/material";
+import { CardActionArea, Button, Stack } from "@mui/material";
 
 import { Box } from "@mui/material";
 
@@ -27,7 +28,6 @@ const Coin = ({
           flexGrow: 1,
           display: { md: "flex" },
           justifyContent: "center",
-          marginBottom: 10,
         }}
       >
         {" "}
@@ -112,7 +112,7 @@ const Coin = ({
                 sx={{ display: { md: "flex" }, justifyContent: "center" }}
               >
                 <>
-                  Website: <Link href={websiteUrl}>{websiteUrl}</Link>
+                  Website: <a href={websiteUrl}>{websiteUrl}</a>
                 </>
               </Typography>
               <Typography
@@ -120,7 +120,7 @@ const Coin = ({
                 sx={{ display: { md: "flex" }, justifyContent: "center" }}
               >
                 <>
-                  Twitter: <Link href={twitterUrl}>{twitterUrl}</Link>
+                  Twitter: <a href={twitterUrl}>{twitterUrl}</a>
                 </>
               </Typography>
             </CardContent>
@@ -129,12 +129,11 @@ const Coin = ({
       </Box>
 
       <Stack
-        sx={{ mb: 10 }}
+        sx={{ pb: 2, textDecoration: "none" }}
         direction="row"
-        spacing={2}
         justifyContent="center"
       >
-        <Button href="/coins" variant="contained">
+        <Button component={Link} to="/coins" variant="contained">
           Cotizaciones
         </Button>
       </Stack>

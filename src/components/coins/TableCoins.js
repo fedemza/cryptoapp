@@ -27,12 +27,16 @@ const TableCoins = ({ columns, rows }) => {
       <TableContainer sx={{ maxHeight: 700, minHeight: 600 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
-            <TableRow>
+            <TableRow sx={{ color: "grey" }}>
               {columns.map((column, index) => (
                 <TableCell
                   key={index}
                   align={column.align}
-                  style={{ minWidth: column.minWidth, fontSize: "1rem" }}
+                  style={{
+                    minWidth: column.minWidth,
+                    fontSize: "1rem",
+                    // backgroundColor: "#95A5A6",
+                  }}
                 >
                   {column.label}
                 </TableCell>

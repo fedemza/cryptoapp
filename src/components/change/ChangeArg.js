@@ -4,7 +4,7 @@ const ChangeArg = ({ loading, changeArg }) => {
   return (
     <h4
       style={{
-        color: "darkblue",
+        // color: "darkblue",
         marginLeft: "2px",
         marginTop: "10px",
         marginRight: "0px",

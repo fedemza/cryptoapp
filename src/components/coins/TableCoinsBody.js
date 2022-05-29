@@ -16,7 +16,10 @@ const TableCoinsBody = ({ columns, rows, page, rowsPerPage }) => {
                 const value = row[column.id];
                 return (
                   <TableCell key={index} align={column.align}>
-                    <Link to={row["id"]} style={{ textDecoration: "none" }}>
+                    <Link
+                      to={row["id"]}
+                      style={{ textDecoration: "none", color: "grey" }}
+                    >
                       {typeof value === "string" &&
                       value[value.length - 4] +
                         value[value.length - 3] +
